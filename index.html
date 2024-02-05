@@ -210,14 +210,20 @@
                                     <h6 class="card-title mbr-fonts-style display-5">
                                         <strong>Reconnect today</strong></h6>
                                     <p class="mbr-text mbr-fonts-style display-7">
-                                        Subscribe now to start receiving two gratitude prompts for your relationship each week. All subscriptions come with a 14-day free trial so you can see if Couples GPS works for you.
-                                        <br><br>
-                                        <a href="https://billing.stripe.com/p/login/3cs0394tMeHz8VO000" class="text-info" target="_blank">Click here to cancel your subscription</a>
+                                        Sign up now to start receiving two gratitude prompts for your relationship each week.
+                                        <br>
+                                        <!-- <p class="price mbr-fonts-style display-2"><br>$5.99/mo</p> -->
+                                        <div class="mbr-section-btn fbclicker" style="margin: auto; display: table;">
+                                            <a href="https://mailchi.mp/51825deacc3b/sms-signup" class="btn btn-primary display-4" style="font-size: 30px" target="_blank">
+                                                Subscribe for free
+                                            </a>
+                                        </div>
+                                        <!-- <br>
+                                        <a href="https://billing.stripe.com/p/login/3cs0394tMeHz8VO000" class="text-info" target="_blank">Click here to unsubscribe</a> -->
                                     </p>
                                 </div>
-                                <div class="col-md-auto">
-                                    <p class="price mbr-fonts-style display-2"><br>$5.99/mo</p>
-                                    <div class="mbr-section-btn fbclicker"><a href="https://buy.stripe.com/14kaGR9JCckZ0HmfYY" class="btn btn-primary display-4" target="_blank">14 Day Free Trial</a></div>
+                                <div class="col-md-auto" style="font-size: 30px;">
+                                    
                                 </div>
                                 <div></div>
                             </div>
@@ -274,7 +280,7 @@
             <div class="col-12">
                 <p class="mbr-text mb-0 mbr-fonts-style display-7"><a href="terms-of-service.html" class="text-primary" target="_blank">Terms of Service</a><br>
                     <a href="privacy-policy.html" class="text-primary" target="_blank">Privacy Policy</a><br>
-                    © Copyright 2023 Ostrea Cultura - All Rights Reserved
+                    © Copyright <span id="copyright_year"></span> Ostrea Cultura - All Rights Reserved
                 </p>
             </div>
         </div>
@@ -285,11 +291,17 @@
 </html>
 
 <script>
-    document.getElementsByClassName('fbclicker')[0]
-        .addEventListener('click', function (event) {
-            fbq('track', 'InitiateCheckout', {
-                value: 5.99,
-                currency: 'USD',
-            });
-        });
+    // document.getElementsByClassName('fbclicker')[0]
+    //     .addEventListener('click', function (event) {
+    //         fbq('track', 'InitiateCheckout', {
+    //             value: 5.99,
+    //             currency: 'USD',
+    //         });
+    //     });
+        
+    // Get the current year
+    var currentYear = new Date().getFullYear();
+
+    // Update the content of the span element with id "copyright_year"
+    document.getElementById("copyright_year").textContent = currentYear;
 </script>
